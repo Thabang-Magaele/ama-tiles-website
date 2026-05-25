@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AMA Tiles — Concrete Roof Tiles | Kabokweni, Mpumalanga</title>
-<meta name="description" content="AMA Tiles manufactures premium concrete roof tiles in Kabokweni, Mpumalanga. Majorca, Double Roman & Flat Goodtile profiles. SABS certified. Trusted since 1993." />
+<meta name="description" content="AMA Tiles manufactures premium concrete roof tiles in Kabokweni, Mpumalanga. Majorca, Double Roman, Flat Goodtile & Flat Goodtile Rustic profiles in 10 colours. SABS approved. Trusted since 1993." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -90,13 +90,13 @@
     <span>Majorca<span></span></span>
     <span>Double Roman</span>
     <span>Flat Goodtile</span>
+    <span>Flat Goodtile Rustic</span>
     <span>Ridging &amp; Fittings</span>
-    <span>Lowveld Mix</span>
     <span>Majorca</span>
     <span>Double Roman</span>
     <span>Flat Goodtile</span>
+    <span>Flat Goodtile Rustic</span>
     <span>Ridging &amp; Fittings</span>
-    <span>Lowveld Mix</span>
   </div>
 </div>
 
@@ -137,8 +137,8 @@
         be trusted for generations.</p>
       <div class="cert-row">
         <div class="cert"><b>1993</b>Established</div>
-        <div class="cert"><b>3</b>Tile profiles</div>
-        <div class="cert"><b>25+</b>Colour options</div>
+        <div class="cert"><b>4</b>Tile profiles</div>
+        <div class="cert"><b>10</b>Colour options</div>
       </div>
     </div>
   </div>
@@ -149,9 +149,9 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Tile profiles</span>
-      <h2>Three signature profiles.</h2>
-      <p>Every AMA tile profile is available in a full spectrum of colours, with
-        matching taper ridge, hip starter and rake verge fittings.</p>
+      <h2>Four signature profiles.</h2>
+      <p>Every AMA tile profile is available in all ten colours, with matching
+        ridging and fittings to finish the roof.</p>
     </div>
     <div class="profiles-grid" id="profilesGrid"></div>
   </div>
@@ -163,8 +163,9 @@
     <div class="sec-head reveal">
       <span class="eyebrow">Product catalogue</span>
       <h2>Build your tile order.</h2>
-      <p>Browse the full AMA range, add tiles and fittings to your quote list, then
-        send it straight to our team on WhatsApp for pricing.</p>
+      <p>Buy as little as a single tile, or order by the pallet —
+        <b>200 tiles</b> per pallet. Add what you need, then send your quote
+        request straight to our team on WhatsApp and we'll come back with pricing.</p>
     </div>
     <div class="filters reveal" id="filters"></div>
     <div class="product-grid" id="productGrid"></div>
@@ -176,17 +177,18 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Our work</span>
-      <h2>Roofs across the Lowveld.</h2>
-      <p>A glimpse of the homes, estates and public buildings finished with AMA
-        Tiles. New project photography is added regularly.</p>
+      <h2>Some of our projects in Mpumalanga.</h2>
+      <p>Homes, estates, hospitals and shopping centres across the Lowveld —
+        roofed with AMA Tiles. New projects are added regularly.</p>
     </div>
     <div class="projects-grid" id="projectsGrid"></div>
     <div class="proj-note reveal">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <span><b>Note for the AMA team:</b> each card below is an image placeholder.
-        Open <code>index.html</code>, find the <code>projects</code> data list in the
-        script and swap each <code>img</code> value with your real photo file —
-        or replace the <code>.ph</code> placeholder block with an <code>&lt;img&gt;</code> tag.</span>
+     <!--    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
+  <span><b>Note for the AMA team:</b> project photos currently load from your
+        existing site (amatiles.co.za). To host them yourself, download the images
+        and update the <code>img</code> values in the <code>PROJECTS</code> list in
+        <code>script.js</code>. Profile and product cards still use placeholders —
+        set their <code>img</code> values the same way.</span>-->
     </div>
   </div>
 </section>
@@ -333,19 +335,50 @@
   </div>
   <div class="drawer-body" id="drawerBody"></div>
   <div class="drawer-foot" id="drawerFoot" style="display:none">
-    <div class="q-summary"><span>Total items in request</span><b id="qTotal">0</b></div>
-    <div class="q-fields">
-      <input type="text" id="qName" placeholder="Your name *" />
-      <input type="tel" id="qPhone" placeholder="Your phone number *" />
-      <input type="text" id="qPlace" placeholder="Delivery town / area" />
-      <textarea id="qNote" placeholder="Notes (roof size, timing, etc.) — optional"></textarea>
+
+    <!-- delivery -->
+    <div class="q-block">
+      <h5>Delivery</h5>
+      <div class="field-mini">
+        <label for="qKm">Distance to your site (km)</label>
+        <input type="number" id="qKm" min="0" step="1" placeholder="e.g. 25" />
+      </div>
+      <div class="deliv-info" id="deliveryInfo"></div>
     </div>
+
+    <!-- house plan upload -->
+    <div class="q-block">
+      <h5>Not sure how many tiles you need?</h5>
+      <p class="q-mini">Upload your house plan and our team will work out the exact
+        quantity for you.</p>
+      <label class="upload-btn" for="qPlan">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>
+        Upload house plan
+      </label>
+      <input type="file" id="qPlan" accept="image/*,application/pdf" hidden />
+      <div id="planChip"></div>
+    </div>
+
+    <!-- your details -->
+    <div class="q-block">
+      <h5>Your details</h5>
+      <div class="q-fields">
+        <input type="text" id="qName" placeholder="Your name *" />
+        <input type="tel" id="qPhone" placeholder="Your phone number *" />
+        <input type="text" id="qPlace" placeholder="Delivery town / area" />
+        <textarea id="qNote" placeholder="Notes (roof size, timing, etc.) — optional"></textarea>
+      </div>
+    </div>
+
+    <!-- totals -->
+    <div class="q-totals" id="qTotals"></div>
+
     <button class="btn btn-wa" id="sendQuote">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.3-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
       Send Quote Request on WhatsApp
     </button>
-    <p class="q-disclaim">This sends an itemised list to AMA Tiles on WhatsApp.
-      Pricing is confirmed by our team — no payment is taken here.</p>
+    <p class="q-disclaim">This sends an itemised request to AMA Tiles on WhatsApp.
+      Pricing &amp; stock are quoted by our team — no payment is taken here.</p>
   </div>
 </aside>
 

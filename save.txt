@@ -1,0 +1,27 @@
+const PROFILES = [
+  {key:"majorca", name:"Majorca", sku:"SK2", tagline:"Classic Spanish-style barrel", img:"images/sk2.png",
+   desc:"A timeless single-wave roman barrel profile. Bold shadow lines and a warm, traditional silhouette suited to homes and estates."},
+  {key:"double", name:"Double Roman", sku:"SK17", tagline:"Twin-wave architectural profile", img:"images/sk17.png",
+   desc:"Two crisp barrel waves per tile for a rhythmic, contemporary roofscape — a striking, modern roofline."},
+  {key:"flat", name:"Flat Goodtile", sku:"SK10", tagline:"Sleek modern flat profile", img:"images/sk10.png",
+   desc:"A clean, low-profile flat tile for a refined, contemporary look that suits modern architecture."},
+  {key:"flatrustic", name:"Flat Goodtile Rustic", sku:"SK11", tagline:"Textured rustic flat profile", img:"images/sk11.png",
+   desc:"The Flat Goodtile with a rustic textured face — added depth and character while keeping the low, modern profile."},
+];
+
+/* ---------- PRODUCTS ----------
+   cat: tiles | accessories.  Every product is offered in all 10
+   colours (chosen on the card). Add a photo: set img to a filename. */
+const PRODUCTS = [
+  // --- Roof tile profiles ---
+  {sku:"SK2",  cat:"tiles", profile:"Majorca",              customName:"Majorca",              img:"images/sk2.png"},
+  {sku:"SK17", cat:"tiles", profile:"Double Roman",         customName:"Double Roman",         img:"images/sk17.png"},
+  {sku:"SK10", cat:"tiles", profile:"Flat Goodtile",        customName:"Flat Goodtile",        img:"images/sk10.png"},
+  {sku:"SK11", cat:"tiles", profile:"Flat Goodtile Rustic", customName:"Flat Goodtile Rustic", img:"images/sk11.png"},
+  // --- Ridging & fittings ---
+  {sku:"SK20", cat:"accessories", profile:"Ridging & Fittings", customName:"Taper Ridge",    img:"images/sk20.png"},
+  {sku:"SK22", cat:"accessories", profile:"Ridging & Fittings", customName:"Hip Starter",    img:"images/sk22.png"},
+  {sku:"SK21", cat:"accessories", profile:"Ridging & Fittings", customName:"Rake Verge",     img:"images/sk21.png"},
+  {sku:"SK23", cat:"accessories", profile:"Ridging & Fittings", customName:"V/Ridge",        img:"images/sk23.png"},
+  {sku:"SK24", cat:"accessories", profile:"Ridging & Fittings", customName:"V/Hip Starter",  img:"images/sk24.png"},
+];
